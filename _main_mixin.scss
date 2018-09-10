@@ -1,0 +1,8 @@
+@mixin area($col_start, $col_end, $row_start, $row_end) {
+    background-color: rgb(202, 207, 210);
+    grid-column: #{$col_start} / #{$col_end};
+    grid-row: #{$row_start} / #{$row_end};
+    &:hover {
+        background-color: darken(hsl(204, 8%, 81%), 5%);
+    }
+}

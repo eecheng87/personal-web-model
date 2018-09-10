@@ -1,0 +1,9 @@
+doctype html
+html 
+    head
+        link(rel="stylesheet" type="text/css" href="../main.css")
+    body.main
+        div.nav 
+            each val in ['Page_0','Page_1','Page_2','Page_3']
+                a(class=val href='/'+val)=val
+        script(src="../server.js")
