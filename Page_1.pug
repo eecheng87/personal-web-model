@@ -1,6 +1,14 @@
 doctype html
 html 
     head
-        link(rel="stylesheet" type="text/css" href="/css/Page_1.css")
+        block head
+            link(rel="stylesheet" type="text/css" href="/css/Page_1.css")
     body.main
-        |HH
+        div.container 
+            block nav
+                div.nav
+                    each val in ['Page0','Page1','Page2','Page3']
+                        a(class=val href='/'+val)=val
+            block content
+                each val in ['box1','box2','box3','box4','box5','box6']
+                    div(class=val)=val

@@ -5,5 +5,6 @@ const server = express();
 
 server.use('/', urls);
 server.use('/css', express.static('css'));
+server.use('/public', express.static('public'));
 
 server.listen(8080);

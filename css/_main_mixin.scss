@@ -1,8 +1,16 @@
-@mixin area($col_start, $col_end, $row_start, $row_end) {
-    background-color: rgb(202, 207, 210);
+@mixin area($col_start, $col_end, $row_start, $row_end, $color) {
+    background-color: $color;
+    text-decoration: none;
     grid-column: #{$col_start} / #{$col_end};
     grid-row: #{$row_start} / #{$row_end};
-    &:hover {
-        background-color: darken(hsl(204, 8%, 81%), 5%);
+    &:not(:last-child):hover {
+        background-color: darken($color, 5%);
     }
+}
+
+@mixin divArea($col_start, $col_end, $row_start, $row_end, $color) {
+    background-color: $color;
+    text-decoration: none;
+    grid-column: #{$col_start} / #{$col_end};
+    grid-row: #{$row_start} / #{$row_end};
 }

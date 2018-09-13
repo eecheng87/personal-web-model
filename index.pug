@@ -3,7 +3,9 @@ html
     head
         link(rel="stylesheet" type="text/css" href="/css/main.css")
     body.main
-        div.nav 
+        div.container 
             each val in ['Page0','Page1','Page2','Page3']
                 a(class=val href='/'+val)=val
+            div.content
+                |This is web model
     
