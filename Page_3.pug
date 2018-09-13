@@ -1,0 +1,7 @@
+extends Page_1.pug
+
+block head
+    link(rel="stylesheet" type="text/css" href="/css/Page_3.css")
+block content
+    each val,index in ['box1']
+        div(class=val)='content-'+index

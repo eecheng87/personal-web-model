@@ -10,5 +10,5 @@ html
                     each val in ['Page0','Page1','Page2','Page3']
                         a(class=val href='/'+val)=val
             block content
-                each val in ['box1','box2','box3','box4','box5','box6']
-                    div(class=val)=val
+                each val,index in ['box1','box2','box3','box4','box5','box6']
+                    div(class=val)='content-'+index

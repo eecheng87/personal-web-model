@@ -1,0 +1,19 @@
+@import 'main_mixin';
+@import 'main_extend';
+.main {
+    div.container {
+        @extend %navStyleI;
+        a {
+            @extend %aStyle;
+        }
+        .nav {
+            @include divArea(1, 8, 1, 2, hsl(204, 89%, 17%));
+        }
+        .box1 {
+            @include divArea(2, 7, 3, 4, white, true);
+        }
+        .box2 {
+            @include divArea(2, 7, 5, 6, white, true);
+        }
+    }
+}
